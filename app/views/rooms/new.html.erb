@@ -1,1 +1,6 @@
 <%= render 'form' %>
+<% if @room.errors.any? %>
+    <% @room.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+<% end %>
